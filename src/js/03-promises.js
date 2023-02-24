@@ -2,9 +2,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const refs = {
   form: document.querySelector('form'),
-  firstDelayInput: document.querySelector('[name="delay"]'),
-  delayStepInput: document.querySelector('[name="step"]'),
-  amountValueInput: document.querySelector('[name="amount"]'),
+  button: document.querySelector('button'),
 };
 
 refs.form.addEventListener('submit', onFormSumbit);
@@ -24,6 +22,7 @@ function onFormSumbit(e) {
       });
     delay += Number(refs.form.step.value);
   }
+  clearFormFields();
 }
 
 function createPromise(position, delay) {
@@ -41,4 +40,8 @@ function createPromise(position, delay) {
       }
     }, delay);
   });
+}
+
+function clearFormFields() {
+  refs.form.reset();
 }

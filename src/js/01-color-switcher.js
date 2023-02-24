@@ -27,4 +27,3 @@ function onStopBtnClick() {
 function generateBgColor() {
   document.body.style.backgroundColor = getRandomHexColor();
 }
-console.log('terminal test');
