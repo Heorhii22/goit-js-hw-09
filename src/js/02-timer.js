@@ -37,9 +37,7 @@ refs.startBtn.addEventListener('click', onTimerStart);
 
 function generateDate() {
   const selectedDate = new Date(refs.datePicker.value).getTime();
-
   const currentDate = new Date().getTime();
-
   const timerDate = selectedDate - currentDate;
 
   return timerDate;
