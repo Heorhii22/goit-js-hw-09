@@ -53,6 +53,7 @@ function onTimerStart() {
     if (timerDate < 0) {
       return;
     }
+    refs.startBtn.setAttribute('disabled', '');
 
     const timerComponents = convertMs(timerDate);
     return clockTimerUpdate(timerComponents);
